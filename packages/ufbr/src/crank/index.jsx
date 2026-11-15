@@ -5,7 +5,12 @@ export const renderer = (target, Component, props) => {
   crankRenderer.render(<Component {...props}/>, target);
 };
 
-export const createFileBasedRouter = ({ pages, target }) =>
+export const createFileBasedRouter = ({ 
+  pages, 
+  target,
+  lazy = false,
+  base
+ }) =>
   createSPAFileBasedRouter({
     pages,
     target,

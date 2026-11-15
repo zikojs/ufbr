@@ -2,7 +2,7 @@
   "name": "ufbr-root",
   "version": "1.0.0",
   "description": "",
-  "private": "true",
+  "private": true,
   "homepage": "https://github.com/zakarialaoui10/ufbr#readme",
   "bugs": {
     "url": "https://github.com/zakarialaoui10/ufbr/issues"
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/zakarialaoui10/ufbr.git"
   },
-  "workspaces":[
+  "workspaces": [
     "packages/*"
   ],
   "license": "MIT",
@@ -24,6 +24,6 @@
     "templates:publish": "pnpm templates:prepare && pnpm publish -r --no-git-checks; pnpm templates:restore"
   },
   "dependencies": {
-    "ziko": "^1.10.0"
+    "ziko": "2.0.0-rc.13"
   }
 }

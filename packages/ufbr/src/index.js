@@ -1,0 +1,1 @@
+export * from 'ziko/router/file-based-router'
