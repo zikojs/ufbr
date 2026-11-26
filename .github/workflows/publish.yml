@@ -1,4 +1,4 @@
-name: Publish Icons packages
+name: Publish Zikojs packages
 
 on:
   workflow_dispatch:
@@ -11,13 +11,13 @@ on:
         options: [latest, next, beta]
   push:
     tags:
-      - "icons-v*"
+      - "ufbr-v*"
 
 permissions:
   contents: read
 
 concurrency:
-  group: publish-icons
+  group: publish-ziko
   cancel-in-progress: false
 
 jobs:
@@ -30,8 +30,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: zikojs/workflow@v1.1.0
+      - uses: zikojs/pnpm-publish@v1.3
         with:
-          tag-prefix: icons-v
-          dist-tag: ${{ inputs.tag }}   # empty on tag push, so auto-detected
+          tag-prefix: ufbr-v
+          # dist-tag: ${{ inputs.tag }}
           npm-token: ${{ secrets.NPM_TOKEN }}
+          sync-templates: true
+          template-patterns: "packages/create-ufbr/templates/*"
+          fail-on-build-error: false
+          dist-tag : 'latest'
