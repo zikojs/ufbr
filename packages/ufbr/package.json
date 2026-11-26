@@ -1,6 +1,6 @@
 {
   "name": "ufbr",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "universal file based router",
   "exports": {
     "./*": {
@@ -20,13 +20,14 @@
     "svelte",
     "vue"
   ],
-  "homepage": "https://github.com/zakarialaoui10/ufbr#readme",
+  "homepage": "https://github.com/zikojs/ufbr#readme",
   "bugs": {
-    "url": "https://github.com/zakarialaoui10/ufbr/issues"
+    "url": "https://github.com/zikojs/ufbr/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zakarialaoui10/ufbr.git"
+    "url": "git+https://github.com/zikojs/ufbr.git",
+    "directory": "packages/ufbr"
   },
   "license": "MIT",
   "author": "zakaria elalaoui",

@@ -12,4 +12,4 @@ catalog:
   vite: latest
 
 minimumReleaseAgeExclude:
-  - ziko@2.0.0-rc.13
+  - ziko@2.0.0-rc.15
