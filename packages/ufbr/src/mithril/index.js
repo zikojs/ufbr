@@ -7,6 +7,15 @@ export const renderer = async (target, component, props, wrapper, m) => {
         throw new Error("Invalid Mithril component");
     }
 
+    // Resolve function components with props
+    if (typeof component === "function") {
+        component = await component(props ?? {});
+    }
+
+    if (!component) {
+        throw new Error("Mithril component returned an invalid value");
+    }
+
     const page = {
         view: () => {
             let vnode = m(component, props ?? {});

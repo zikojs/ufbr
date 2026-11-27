@@ -17,7 +17,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: publish-ziko
+  group: publish-ufbr
   cancel-in-progress: false
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: zikojs/pnpm-publish@v1.3
+      - uses: zikojs/pnpm-publish@v1.4
         with:
           tag-prefix: ufbr-v
           # dist-tag: ${{ inputs.tag }}
@@ -38,4 +38,3 @@ jobs:
           sync-templates: true
           template-patterns: "packages/create-ufbr/templates/*"
           fail-on-build-error: false
-          dist-tag : 'latest'

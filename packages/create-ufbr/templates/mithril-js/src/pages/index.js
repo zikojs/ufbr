@@ -1,8 +1,8 @@
 import m from "mithril";
 
-const Counter = {
-    count: 0,
-
+export default function Counter({start = 10} = {}){
+    return  {
+    count: start,
     view() {
         return m("main", [
             m("h1", `Count: ${this.count}`),
@@ -15,7 +15,9 @@ const Counter = {
                 onclick: () => this.count--
             }, "Decrement")
         ]);
+    }    
     }
+    
 };
 
-export default Counter;
+// export default Counter;
