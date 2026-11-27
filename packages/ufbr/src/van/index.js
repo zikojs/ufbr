@@ -1,4 +1,4 @@
-import { createFileBasedRouter } from "ziko/router";
+import { createFileBasedRouter as createSPAFileBasedRouter} from "ziko/router";
 
 export const renderer = async (target, component, props, wrapper)=>{
       let mounted = await component(props);
@@ -10,7 +10,7 @@ export const renderer = async (target, component, props, wrapper)=>{
       target.append(mounted)
     }
 
-export const createFileBasedRouter = ({pages, target, wrapper, extensions = []}) => createFileBasedRouter({
+export const createFileBasedRouter = ({pages, target, wrapper, extensions = []}) => createSPAFileBasedRouter({
     pages,
     target,
     extensions: [...new Set(['js', 'ts', ...extensions])],

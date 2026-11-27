@@ -1,4 +1,4 @@
-import { createSPAFileBasedRouter } from "ziko/router";
+import { createFileBasedRouter as createSPAFileBasedRouter } from "ziko/router";
 import { renderer as crankRenderer } from "@b9g/crank/dom";
 
 export const renderer = (target, Component, props) => {
@@ -16,4 +16,6 @@ export const createFileBasedRouter = ({
     target,
     extensions: ["jsx", "tsx", "js", "ts"],
     renderer,
+    lazy,
+    base
   });

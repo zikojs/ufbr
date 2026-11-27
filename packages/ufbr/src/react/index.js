@@ -1,4 +1,4 @@
-import { createSPAFileBasedRouter } from "ziko/router";
+import { createFileBasedRouter as createSPAFileBasedRouter } from "ziko/router";
 import { createRoot } from 'react-dom/client';
 import { createElement } from "react";
 

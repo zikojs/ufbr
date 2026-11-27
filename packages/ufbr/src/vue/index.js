@@ -1,4 +1,4 @@
-import { createSPAFileBasedRouter } from "ziko/router";
+import { createFileBasedRouter as createSPAFileBasedRouter } from "ziko/router";
 import { createApp } from 'vue'
 
 export const renderer = (target, component, props)=>{
