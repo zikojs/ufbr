@@ -1,6 +1,7 @@
 packages:
   - "packages/*"
   - "packages/create-ufbr/templates/*"
+  - "docs/"
 
 allowBuilds:
   esbuild: false

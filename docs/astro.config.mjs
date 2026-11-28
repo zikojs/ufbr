@@ -10,6 +10,10 @@ export default defineConfig({
       starlight({
           title: 'Ufbr',
           social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/zakarialaoui10/ufbr' }],
+          customCss: [
+            "./src/styles/custom.css",
+            "./src/styles/theme.css"
+            ],
           sidebar: [
               {
                 label : 'Getting started',
